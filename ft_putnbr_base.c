@@ -1,5 +1,14 @@
-//header 42 plz
-
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tgouedar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/11/29 17:14:33 by tgouedar          #+#    #+#             */
+/*   Updated: 2018/11/29 17:23:25 by tgouedar         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
@@ -17,11 +26,12 @@ static int	ft_verif_base(char *str)
 void		ft_putnbr_base(int n, char *base)
 {
 	unsigned int	i;
-	size_t		j;
+	size_t			j;
 
 	if (!(ft_verif_base(base)) || !(j = ft_strlen(base)))
 	{
-		ft_putstr_fd("Usage : les bases correctes sont non vides, sans doublons, et sans operateur", 2);
+		ft_putstr_fd("Usage : les bases correctes sont non vides, sans doublons\
+				,et sans operateur", 2);
 		return ;
 	}
 	j = ft_strlen(base);

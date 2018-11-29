@@ -6,7 +6,7 @@
 #    By: tgouedar <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/05 22:11:12 by tgouedar          #+#    #+#              #
-#    Updated: 2018/11/26 13:58:30 by tgouedar         ###   ########.fr        #
+#    Updated: 2018/11/29 17:18:22 by tgouedar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,6 +61,7 @@ SRCFILE	= ft_swap.c\
 		  ft_strnequ.c\
 		  ft_strsub.c\
 		  ft_strjoin.c\
+		  ft_strappend.c\
 		  ft_strtrim.c\
 		  ft_strrev.c\
 		  ft_strsplit.c\
