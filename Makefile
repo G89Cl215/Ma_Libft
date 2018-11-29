@@ -72,6 +72,7 @@ SRCFILE	= ft_swap.c\
 		  ft_putendl_fd.c\
 		  ft_putnbr.c\
 		  ft_putnbr_fd.c\
+		  ft_putnbr_base.c\
 		  ft_lstadd.c\
 		  ft_lstdel.c\
 		  ft_lstdelone.c\

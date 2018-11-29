@@ -84,6 +84,7 @@ void				ft_putendl(char const *str);
 void				ft_putendl_fd(char const *str, int fd);
 void				ft_putnbr(int n);
 void				ft_putnbr_fd(int n, int fd);
+void				ft_putnbr_base(int n, char *base);
 void				ft_lstadd(t_list **alst, t_list *n);
 void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
