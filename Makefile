@@ -6,7 +6,7 @@
 #    By: tgouedar <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/05 22:11:12 by tgouedar          #+#    #+#              #
-#    Updated: 2018/11/29 17:18:22 by tgouedar         ###   ########.fr        #
+#    Updated: 2018/11/29 18:50:54 by tgouedar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,6 +40,7 @@ SRCFILE	= ft_swap.c\
 		  ft_strncmp.c\
 		  ft_atoi.c\
 		  ft_itoa.c\
+		  ft_pow.c\
 		  ft_isalpha.c\
 		  ft_isdigit.c\
 		  ft_isalnum.c\
