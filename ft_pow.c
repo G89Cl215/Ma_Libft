@@ -6,11 +6,11 @@
 /*   By: tgouedar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/29 18:48:20 by tgouedar          #+#    #+#             */
-/*   Updated: 2018/11/29 18:52:27 by tgouedar         ###   ########.fr       */
+/*   Updated: 2018/12/02 14:45:50 by tgouedar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_pow(int n, unsigned i)
+int		ft_pow(int n, unsigned int i)
 {
 	if (!i)
 		return (1);
