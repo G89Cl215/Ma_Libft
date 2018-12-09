@@ -6,7 +6,7 @@
 #    By: tgouedar <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/05 22:11:12 by tgouedar          #+#    #+#              #
-#    Updated: 2018/11/29 18:50:54 by tgouedar         ###   ########.fr        #
+#    Updated: 2018/12/09 14:55:10 by tgouedar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -87,7 +87,9 @@ SRCFILE	= ft_swap.c\
 SRCDIR	= ./
 SRC		= $(addprefix $(SRCDIR),$(SRCFILE))
 HDR 	= .
-OBJ 	= $(SRCFILE:.c=.o)
+OBJFILE	= $(SRCFILE:.c=.o)
+OBJDIR	= obj
+OBJ		= $(addprefix $(OBJDIR)/,$(OBJFILE))
 
 NAME 	= libft.a
 
@@ -96,11 +98,15 @@ all : $(NAME)
 $(NAME) : $(OBJ)
 	ar rc $(NAME) $(OBJ)
 
-%.o : %.c
-	$(CC) $(CFLAGS) -o $@ -c $< -I $(HDR)
+$(OBJDIR)/%.o : %.c | $(OBJDIR)
+	$(CC) $(CFLAGS) -o $@ -c $^ -I $(HDR)
+
+$(OBJDIR) :
+	/bin/mkdir $(OBJDIR)
 
 clean :
-	/bin/rm -f $(OBJ)
+	@/bin/rm $(OBJ) 2>/dev/null || true
+	@/bin/rm -R $(OBJDIR) 2>/dev/null || true
 
 fclean : clean
 	/bin/rm -f $(NAME)

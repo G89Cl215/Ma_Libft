@@ -6,7 +6,7 @@
 /*   By: tgouedar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 16:20:25 by tgouedar          #+#    #+#             */
-/*   Updated: 2018/11/27 19:29:28 by tgouedar         ###   ########.fr       */
+/*   Updated: 2018/12/09 12:23:41 by tgouedar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <sys/types.h>
 # include <sys/uio.h>
+# include <stdlib.h>
 # include <unistd.h>
 # include "libft.h"
 # define BUFF_SIZE 5

@@ -6,11 +6,12 @@
 /*   By: tgouedar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 21:27:42 by tgouedar          #+#    #+#             */
-/*   Updated: 2018/11/17 13:16:08 by tgouedar         ###   ########.fr       */
+/*   Updated: 2018/12/09 12:18:20 by tgouedar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 static size_t	ft_word(char const *str, char c)
 {

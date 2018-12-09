@@ -6,11 +6,12 @@
 /*   By: tgouedar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/14 15:42:58 by tgouedar          #+#    #+#             */
-/*   Updated: 2018/11/17 13:41:40 by tgouedar         ###   ########.fr       */
+/*   Updated: 2018/12/09 12:22:21 by tgouedar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 t_list	*ft_lstnew(void const *cont, size_t cont_size)
 {
