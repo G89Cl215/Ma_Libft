@@ -6,7 +6,7 @@
 #    By: tgouedar <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/05 22:11:12 by tgouedar          #+#    #+#              #
-#    Updated: 2018/12/09 14:55:10 by tgouedar         ###   ########.fr        #
+#    Updated: 2018/12/14 01:51:09 by tgouedar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -78,6 +78,8 @@ SRCFILE	= ft_swap.c\
 		  ft_lstadd.c\
 		  ft_lstdel.c\
 		  ft_lstdelone.c\
+		  ft_lstfree.c\
+		  ft_lstfreeone.c\
 		  ft_lstnew.c\
 		  ft_lstmap.c\
 		  ft_lstiter.c\
