@@ -6,7 +6,7 @@
 #    By: tgouedar <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/05 22:11:12 by tgouedar          #+#    #+#              #
-#    Updated: 2018/12/14 03:16:30 by tgouedar         ###   ########.fr        #
+#    Updated: 2018/12/17 17:16:51 by tgouedar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -86,6 +86,7 @@ SRCFILE	= ft_swap.c\
 		  ft_lstiter.c\
 		  ft_lstadd_back.c\
 		  get_next_line.c\
+		  option.c\
 
 SRCDIR	= ./
 SRC		= $(addprefix $(SRCDIR),$(SRCFILE))
