@@ -6,7 +6,7 @@
 #    By: tgouedar <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/05 22:11:12 by tgouedar          #+#    #+#              #
-#    Updated: 2018/12/18 17:20:19 by tgouedar         ###   ########.fr        #
+#    Updated: 2018/12/18 17:40:05 by tgouedar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,7 @@ SRCFILE	= ft_swap.c\
 		  ft_strcmp.c\
 		  ft_strncmp.c\
 		  ft_atoi.c\
-		  ft_Uitoa_base.c\
+		  ft_unsigned_itoa_base.c\
 		  ft_itoa.c\
 		  ft_pow.c\
 		  ft_isalpha.c\

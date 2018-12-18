@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa_base.c                                     :+:      :+:    :+:   */
+/*   ft_unsigned_itoa_base.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tgouedar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/18 16:06:04 by tgouedar          #+#    #+#             */
-/*   Updated: 2018/12/18 16:12:58 by tgouedar         ###   ########.fr       */
+/*   Created: 2018/12/18 17:40:47 by tgouedar          #+#    #+#             */
+/*   Updated: 2018/12/18 17:40:58 by tgouedar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_Uitoa_base(unsigned long long nb, char *base_to)
+char	*ft_unsigned_itoa_base(unsigned long long nb, char *base_to)
 {
 	char	*res;
 	size_t	i;
