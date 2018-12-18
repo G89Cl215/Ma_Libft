@@ -6,7 +6,7 @@
 /*   By: tgouedar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 18:40:46 by tgouedar          #+#    #+#             */
-/*   Updated: 2018/12/17 17:21:42 by tgouedar         ###   ########.fr       */
+/*   Updated: 2018/12/18 17:20:48 by tgouedar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,9 +48,11 @@ size_t				ft_strcspn(const char *s, const char *charset);
 int					ft_strcmp(const char *s1, const char *s2);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 int					ft_atoi(const char *str);
+char				*ft_Uitoa_base(unsigned long long nb, char *base_to);
 char				*ft_itoa(int nb);
 int					ft_pow(int n, unsigned int i);
 int					ft_isalpha(int c);
+int					ft_islower(int c);
 int					ft_isdigit(int c);
 int					ft_isalnum(int c);
 int					ft_isascii(int c);
@@ -75,6 +77,7 @@ char				*ft_strjoin(char const *s1, char const *s2);
 void				ft_strappend(char **dest, char **src);
 char				*ft_strtrim(char const *s);
 char				*ft_strrev(char *str);
+void				ft_strupper(char *str);
 char				**ft_strsplit(char const *s, char c);
 void				ft_putchar(char c);
 void				ft_putchar_fd(char c, int fd);
