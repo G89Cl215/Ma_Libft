@@ -6,15 +6,15 @@
 #    By: tgouedar <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/06 16:10:22 by tgouedar          #+#    #+#              #
-#    Updated: 2019/09/04 17:46:55 by tgouedar         ###   ########.fr        #
+#    Updated: 2019/09/04 18:07:24 by tgouedar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME    =   libprintf.a
+NAME	=	libprintf.a
 
-HDR_DIR	=   ../includes \
+HDR_DIR	=	../includes \
 
-SRCS	=   ft_printf.c \
+SRCS	=	ft_printf.c \
 			display_result.c \
 			extract_from_pattern.c \
 			conv_char_printf.c \
@@ -47,7 +47,7 @@ SRCS	=   ft_printf.c \
 OBJ_DIR	=	obj
 
 OBJ_FILE=	$(SRCS:.c=.o)
-OBJS    =	$(addprefix $(OBJ_DIR)/,$(OBJ_FILE))
+OBJS	=	$(addprefix $(OBJ_DIR)/,$(OBJ_FILE))
 
 CC		=	gcc
 
@@ -61,8 +61,11 @@ $(NAME)		: $(OBJS) Makefile
 	@ar rc $(NAME) $(OBJS)
 	@echo "LIBFT : $(NAME) has been successfully created."
 
+dep				:=	$(addprefix $(OBJ_DIR)/, $(SRCS:.c=.d))
+-include $(dep)
+
 $(OBJS)		: $(OBJ_DIR)/%.o : %.c | $(OBJ_DIR)
-	@$(CC) $(CFLAGS) -o $(OBJ_DIR)/$*.o -c $<
+	@$(CC) $(CFLAGS) -o $(OBJ_DIR)/$*.o -c $< -MMD -MP
 	@echo "\t\t\t\t\t\t\t\t[OK]\r\t$*"
 
 $(OBJ_DIR)		:

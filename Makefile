@@ -6,7 +6,7 @@
 #    By: tgouedar <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/05 22:11:12 by tgouedar          #+#    #+#              #
-#    Updated: 2019/09/04 17:54:00 by tgouedar         ###   ########.fr        #
+#    Updated: 2019/09/04 18:05:57 by tgouedar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -123,15 +123,15 @@ CFLAGS			+=	$(addprefix -I ,$(HDR_DIR))
 
 TEMP			=	temp_dir
 
-dep				:=	$(addprefix $(OBJ_DIR)/, $(SRCFILE:.c=.d))
--include $(dep)
-
 .PHONY: all re clean clean_simple fclean
 
 all				:
 	@cd $(PRINTF_PATH) && $(MAKE)
 	@cd $(LIST_PATH) && $(MAKE)
 	@($(MAKE) -q $(NAME) && echo "Your LIBFT is up to date") || $(MAKE) $(NAME)
+
+dep := $(addprefix $(OBJ_DIR)/, $(SRCFILE:.c=.d))
+-include $(dep)
 
 $(NAME)			: $(OBJ) $(LISTLIB) $(PRINTFLIB) Makefile
 	@/bin/mkdir -p $(TEMP)

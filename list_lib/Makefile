@@ -6,7 +6,7 @@
 #    By: tgouedar <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/05 22:11:12 by tgouedar          #+#    #+#              #
-#    Updated: 2019/09/04 17:46:54 by tgouedar         ###   ########.fr        #
+#    Updated: 2019/09/04 18:07:00 by tgouedar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,8 +51,11 @@ $(NAME)			: $(OBJ)
 	@ar rc $(NAME) $(OBJ)
 	@echo "LIBFT : Your list_lib.a is ready"
 
+dep				:=	$(addprefix $(OBJ_DIR)/, $(SRCFILE:.c=.d))
+-include $(dep)
+
 $(OBJ)			: $(OBJDIR)/%.o : %.c | $(OBJDIR)
-	@$(CC) $(CFLAGS) -o $(OBJDIR)/$*.o -c $<
+	@$(CC) $(CFLAGS) -o $(OBJDIR)/$*.o -c $< -MMD -MP
 	@echo "\t\t\t\t\t\t\t\t[OK]\r\t$*"
 
 $(OBJDIR)		:
