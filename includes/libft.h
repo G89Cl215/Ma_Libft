@@ -6,7 +6,7 @@
 /*   By: tgouedar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 18:40:46 by tgouedar          #+#    #+#             */
-/*   Updated: 2019/10/09 22:16:42 by tgouedar         ###   ########.fr       */
+/*   Updated: 2019/10/12 22:47:37 by tgouedar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ typedef struct		s_list
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
+
+typedef int		(*t_ft_cmp)(t_list *, t_list *);
 
 void				ft_swap(int *a, int *b);
 int					ft_btw(int test, int min, int max);
@@ -110,6 +112,8 @@ t_list				*ft_lstnew(void const *content, size_t content_size);
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 void				ft_lstadd_back(t_list **alst, t_list *new_back);
+void				ft_lst_mergesort(t_list **lst, t_ft_cmp ft_cmp);
+
 int					integer_len(int nbr);
 int					get_next_line(const int fd, char **line);
 int					ft_option(char ***av, t_options *options);
