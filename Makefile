@@ -6,7 +6,7 @@
 #    By: tgouedar <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/05 22:11:12 by tgouedar          #+#    #+#              #
-#    Updated: 2019/09/04 18:05:57 by tgouedar         ###   ########.fr        #
+#    Updated: 2019/10/11 19:42:58 by tgouedar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,7 +50,8 @@ SRCFILE			= ft_swap.c\
 				  ft_indice.c\
 				  ft_toupper.c\
 				  ft_tolower.c\
-				  ft_memalloc.c\
+
+BONUSRC			= ft_memalloc.c\
 				  ft_memdel.c\
 				  ft_strnew.c\
 				  ft_strdel.c\
@@ -107,6 +108,8 @@ HDR_DIR			=	includes
 OBJ_DIR			=	obj
 OBJ				=	$(addprefix $(OBJ_DIR)/,$(SRCFILE:.c=.o))
 
+BONUS_OBJ		=	$(addprefix $(OBJ_DIR)/,$(BONUSRC:.c=.o))
+
 NAME			=	libft.a
 
 PRINTF_PATH		=	printf
@@ -123,7 +126,7 @@ CFLAGS			+=	$(addprefix -I ,$(HDR_DIR))
 
 TEMP			=	temp_dir
 
-.PHONY: all re clean clean_simple fclean
+.PHONY: all re clean clean_simple fclean bonus
 
 all				:
 	@cd $(PRINTF_PATH) && $(MAKE)
@@ -143,6 +146,13 @@ $(NAME)			: $(OBJ) $(LISTLIB) $(PRINTFLIB) Makefile
 	@echo "Your LIBFT is ready for use."
 
 $(OBJ)			: $(OBJ_DIR)/%.o : $(SRC_DIR)/%.c | $(OBJ_DIR)
+	@$(CC) $(CFLAGS) -o $(OBJ_DIR)/$*.o -c $< -MMD -MP
+	@echo "\t\t\t\t\t\t\t\t[OK]\r\t$*"
+
+bonus			: $(BONUS_OBJ) $(OBJ)
+	ar rc $(NAME) $(OBJ_DIR)/*.o
+
+$(BONUS_OBJ)			: $(OBJ_DIR)/%.o : $(SRC_DIR)/%.c | $(OBJ_DIR)
 	@$(CC) $(CFLAGS) -o $(OBJ_DIR)/$*.o -c $< -MMD -MP
 	@echo "\t\t\t\t\t\t\t\t[OK]\r\t$*"
 

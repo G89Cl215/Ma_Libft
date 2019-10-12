@@ -6,7 +6,7 @@
 /*   By: tgouedar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 18:40:46 by tgouedar          #+#    #+#             */
-/*   Updated: 2019/08/24 21:12:08 by tgouedar         ###   ########.fr       */
+/*   Updated: 2019/10/09 22:16:42 by tgouedar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ int					ft_isascii(int c);
 int					ft_isprint(int c);
 int					ft_isunicode(unsigned char *to_test);
 int					ft_isin(const char c, const char *charset);
-size_t				ft_indice(char c, char *charset);
+size_t				ft_indice(char c, const char *charset);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
 void				*ft_memalloc(size_t size);
@@ -88,7 +88,7 @@ void				ft_strupper(char *str);
 size_t				ft_tablen(char **tab_);
 char				**ft_tabcpy(char **tab_);
 void				ft_tabfree(char **tab_);
-char				**ft_strsplit(char const *s, char c);
+char				**ft_strsplit(char const *s, const char *charset);
 void				ft_putchar(char c);
 void				ft_putchar_fd(char c, int fd);
 void				ft_putstr(char const *str);

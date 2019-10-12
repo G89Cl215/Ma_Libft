@@ -6,23 +6,23 @@
 /*   By: tgouedar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 21:27:42 by tgouedar          #+#    #+#             */
-/*   Updated: 2019/07/02 09:57:37 by tgouedar         ###   ########.fr       */
+/*   Updated: 2019/10/09 19:03:51 by tgouedar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-static size_t	ft_word(char const *str, char c)
+static size_t	ft_word(char const *str, const char *charset)
 {
 	size_t	k;
 
-	k = (*str - c ? 1 : 0);
+	k = ft_isin(*str, charset) ? 0 : 1;
 	while (*str)
 	{
-		while (*str && (*str - c))
+		while (*str && !ft_isin(*str, charset))
 			str++;
-		while (*str && !(*str - c))
+		while (*str && ft_isin(*str, charset))
 			str++;
 		if (*str)
 			k++;
@@ -30,21 +30,21 @@ static size_t	ft_word(char const *str, char c)
 	return (k);
 }
 
-char			**ft_strsplit(char const *str, char c)
+char			**ft_strsplit(char const *str, const char *charset)
 {
 	size_t	k;
 	size_t	l;
 	char	**res;
 
-	if (!(k = 0) && (!str || !c))
+	if (!(k = 0) && (!str || !charset || !*charset))
 		return (NULL);
-	if (!(res = (char**)malloc(sizeof(*res) * (ft_word(str, c) + 1))))
+	if (!(res = (char**)malloc(sizeof(*res) * (ft_word(str, charset) + 1))))
 		return (NULL);
 	while (!(l = 0) && *str)
 	{
-		while (*str && !(*str - c))
+		while (*str && ft_isin(*str, charset))
 			str++;
-		while (str[l] && (str[l] - c))
+		while (str[l] && !ft_isin(str[l], charset))
 			l++;
 		if (!(l))
 			break ;
